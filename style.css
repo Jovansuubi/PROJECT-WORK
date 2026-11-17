@@ -1,0 +1,965 @@
+:root{
+    --forest:#123d2a;
+    --green:#238b45;
+    --lime:#c3d84b;
+    --cream:#f8f7ef;
+    --ink:#17231d;
+    --muted:#69756d;
+    --serif:Georgia,'Times New Roman',serif
+}*{box-sizing:border-box}
+html{scroll-behavior:smooth;
+    scroll-padding-top:76px
+}
+body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font:15px 'DM Sans',sans-serif
+}
+h1,h2,h3,p{margin-top:0}h1,h2{font:600 clamp(3rem,6vw,5.7rem)/.98 'Manrope',sans-serif;letter-spacing:-.065em}
+h2{font-size:clamp(2.7rem,4.6vw,4.6rem)}h1 em,h2 em{font:italic 500 1em var(--serif);
+    letter-spacing:-.06em
+}
+a{color:inherit;
+    text-decoration:none}button,input,textarea,select{font:inherit}
+    header{
+        height:82px;
+        position:fixed;
+        z-index:10;
+        top:0;
+        left:0;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:0 6.5%;color:#fff;transition:.3s
+    }
+        header.scrolled{
+            background:#fff;
+            color:var(--forest);
+            box-shadow:0 5px 25px #123d2a15
+        }
+        .logo{font:800 22px Manrope;
+            letter-spacing:-1.5px;
+            display:flex;
+            align-items:center;
+            gap:5px}.logo span:not(.mark){color:var(--lime)}.mark{font-size:25px;color:var(--lime);
+                margin-right:4px
+            }
+            nav{display:flex;
+                align-items:center;
+                gap:34px;
+                font-size:13px;
+                font-weight:600
+            }
+            nav a{transition:.2s
+            }
+            nav a:hover{
+                color:var(--lime
+                )}
+                .navcta{padding:14px 19px;
+                    border:1px solid #ffffff70;
+                    border-radius:3px
+                }
+                .scrolled .navcta{border-color:#123d2a30
+                }
+                .hamb{
+                    display:none;
+                    background:none;
+                    color:inherit;
+                    border:0;
+                    font-size:25px
+                }
+                .hero{
+                    height:100vh;
+                    min-height:710px;
+                    background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2200&q=90') center 48%/cover;
+                    position:relative;
+                    color:white;
+                    overflow:hidden
+                }
+                .shade{
+                    position:absolute;
+                    inset:0;
+                    background:linear-gradient(90deg,#09271fea 0%,#0d3324c9 45%,#112b2063 100%),linear-gradient(0deg,#09271e80,transparent 45%)
+                }
+                .hero-content{
+                    position:absolute;
+                    left:12%;
+                    top:24%;
+                    max-width:760px;
+                    animation:rise .8s ease both
+                }
+                .eyebrow{
+                    font-size:10px;
+                    font-weight:700;
+                    letter-spacing:2px;
+                    color:#64776b;display:flex;
+                    gap:10px;
+                    align-items:center;
+                    margin-bottom:28px
+                }
+                .eyebrow i{
+                    height:1px;
+                    width:28px;
+                    background:var(--green)
+                }
+                .eyebrow.light{
+                    color:#d6e0d8
+                }
+                .eyebrow.light i{
+                    background:var(--lime)
+                }
+                .hero h1{
+                    font-size:clamp(3.8rem,7.2vw,7rem);
+                    margin-bottom:25px
+                }
+                .hero h1 em{
+                    color:var(--lime)}.hero-content>p{font-size:17px;
+                        line-height:1.75;
+                        color:#e2e8e3;
+                        max-width:480px
+                    }
+                    .actions{
+                        display:flex;
+                        align-items:center;
+                        gap:30px;
+                        margin-top:34px
+                    }
+                    .button{
+                        display:inline-flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        gap:32px;
+                        padding:16px 20px;
+                        border:0;
+                        border-radius:2px;
+                        font-weight:700;
+                        font-size:12px;
+                        cursor:pointer;
+                        transition:.25s
+                    }
+                    .button:hover{
+                        transform:translateY(-3px);
+                        box-shadow:0 10px 25px #0002
+                    }
+                    .lime{
+                        background:var(--lime);
+                        color:var(--forest)
+                    }
+                    .dark{
+                        background:var(--forest);
+                        color:white
+                    }
+                    .textlink{
+                        font-size:12px}.textlink span{margin-left:12px;
+                            color:var(--lime)
+                        }
+                        .hero-note{
+                            position:absolute;
+                            right:10%;
+                            bottom:16%;
+                            border-left:1px solid #ffffff80;
+                            padding-left:18px;
+                            display:grid;
+                            gap:6px;
+                            font-size:12px
+                        }
+                        .hero-note span{
+                            color:#ccd6cf
+                        }
+                        .scroll{
+                            position:absolute;
+                            bottom:35px;
+                            left:6.5%;
+                            font-size:9px;
+                            letter-spacing:2px;
+                            color:#e7ede8}.scroll span{margin-left:15px
+                            }
+                            .hero-stamp{
+                                position:absolute;
+                                right:8%;
+                                top:35%;
+                                border:1px solid #ffffff60;
+                                border-radius:50
+                                width:104px;
+                                height:104px;text-align:center;
+                                padding-top:25px;
+                                font-size:11px;
+                                font-weight:bold;
+                                line-height:1.15;
+                                transform:rotate(12deg)
+                            }
+                            .hero-stamp span{
+                                color:var(--lime)
+                            }
+                            .section{padding:125px 10%
+                            }
+                            .intro{
+                                display:grid;
+                                grid-template-columns:1fr 1fr;
+                                gap:9%;
+                                align-items:center
+                            }
+                            .intro-image{
+                                height:610px;
+                                position:relative
+                            }
+                            .intro-image img{
+                                width:100%;
+                                height:100%;
+                                object-fit:cover;
+                                border-radius:3px
+                            }
+                            .image-tag{
+                                position:absolute;
+                                bottom:28px;
+                                left:-25px;
+                                background:var(--lime);
+                                padding:22px 25px;
+                                font:italic 20px var(--serif);
+                                line-height:1.2
+                            }
+                            .intro-copy h2{
+                                margin-bottom:28px
+                            }
+                            .intro-copy p{
+                                color:#647067;
+                                line-height:1.85;
+                                font-size:14px
+                            }
+                            .underlink{
+                                display:inline-flex;
+                                gap:32px;
+                                padding:10px 0;
+                                border-bottom:1px solid #afbaae;
+                                font-size:12px;
+                                font-weight:bold;
+                                margin-top:10px
+                            }
+                            .underlink span{
+                                color:var(--green)
+                            }
+                            .values{
+                                border-top:1px solid #dbe0d7;
+                                margin-top:35px;
+                                padding-top:22px;
+                                display:flex;
+                                justify-content:space-between
+                            }
+                            .values div{
+                                display:grid;
+                                gap:9px;
+                                font-size:11px
+                            }.values b{
+                                font-size:11px;
+                                color:var(--green)
+                            }
+                            .products{
+                                background:#f0f1e8}
+                                .section-head{
+                                    display:flex;
+                                    justify-content:space-between;
+                                    align-items:end
+                                }
+                                .section-head h2{
+                                    margin-bottom:0
+                                }
+                                .filters{
+                                    display:flex;
+                                    justify-content:space-between;
+                                    align-items:center;
+                                    margin:48px 0 28px;
+                                    border-bottom:1px solid #d5dbd2;
+                                    padding-bottom:16px
+                                }
+                                .chips{
+                                    display:flex;
+                                    gap:9px
+                                }
+                                .chip{
+                                    background:transparent;
+                                    border:1px solid #cdd5cb;
+                                    border-radius:30px;
+                                    padding:10px 16px;font-size:11px;
+                                    color:#53645a;
+                                    cursor:pointer
+                                }
+                                .chip.selected,.chip:hover{
+                                    background:var(--forest);
+                                    color:white;
+                                    border-color:var(--forest)
+                                }
+                                #search{
+                                    border:0;
+                                    border-bottom:1px solid #acb7ac;
+                                    background:transparent;
+                                    padding:10px 0;
+                                    outline:none;
+                                    width:190px;font-size:12px
+                                }
+                                .grid{
+                                    display:grid;
+                                    grid-template-columns:repeat(4,1fr);
+                                    gap:16px
+                                }
+                                .product{
+                                    background:#fff;
+                                    min-width:0;
+                                    transition:.3s
+                                }
+                                .product:hover{
+                                    transform:translateY(-5px);
+                                    box-shadow:0 16px 35px #21332614
+                                }
+                                .bag{
+                                    height:220px;
+                                    display:grid;place-items:center;
+                                    background:#e6eadf;
+                                    overflow:hidden;
+                                    position:relative
+                                }
+                                .bag:before{
+                                    content:'';
+                                    position:absolute;
+                                    width:180px;
+                                    height:180px;
+                                    border:1px solid #fff9;
+                                    border-radius:50%
+                                }
+                                .feedbag{
+                                    width:104px;
+                                    height:150px;
+                                    clip-path:polygon(13% 0,87% 0,100% 100%,0 100%);
+                                    background:linear-gradient(90deg,#d5a647,#f1d183 35%,#b77a27);
+                                    box-shadow:inset 0 0 14px #70430c77;
+                                    position:relative;
+                                    z-index:1;
+                                    display:grid;align-content:center;
+                                    text-align:center;
+                                    padding:12px;
+                                    color:#fff
+                                }
+                                .feedbag.green{
+                                    background:linear-gradient(90deg,#256648,#58a076 40%,#164732)
+                                }
+                                .feedbag.red{
+                                    background:linear-gradient(90deg,#b54a36,#e77a50 45%,#973622)
+                                }
+                                .feedbag.blue{
+                                    background:linear-gradient(90deg,#49778a,#91bbc0 40%,#335e72)
+                                }
+                                .feedbag b{
+                                    font:800 12px Manrope;
+                                    line-height:1.1
+                                }
+                                .feedbag small{
+                                    font-size:7px;
+                                    letter-spacing:2px;
+                                    margin:8px 0
+                                }
+                                .feedbag span{
+                                    border-top:1px solid #ffffff75;
+                                    padding-top:6px;
+                                    font-size:8px
+                                }
+                                .prod-copy{
+                                    padding:17px
+                                }
+                                .badge{
+                                    font-size:9px;
+                                    -spacing:1px;
+                                    text-transform:uppercase;
+                                    color:var(--green);
+                                    font-weight:700
+                                }
+                                .prod-copy h3{
+                                    font:700 17px Manrope;
+                                    margin:9px 0
+                                }
+                                .prod-copy p{
+                                    color:#778078;
+                                    font-size:11px;
+                                    line-height:1.6;
+                                    min-height:38px
+                                }
+                                .pack{font-size:10px;
+                                    color:#637369;
+                                    border-top:1px solid #e8ebe5;
+                                    padding-top:10px
+                                }
+                                .card-actions{
+                                    display:flex;
+                                        justify-content:space-between;
+                                        margin-top:17px
+                                    }
+                                    .card-actions button{
+                                        background:none;
+                                        border:0;
+                                        padding:0;
+                                        color:var(--forest);
+                                        font-size:10px;
+                                        font-weight:bold;
+                                        cursor:pointer
+                                    }
+                                    .card-actions button:last-child{
+                                        color:var(--green)
+                                    }
+                                    .catalog{
+                                        display:flex;
+                                        justify-content:space-between;
+                                        align-items:center;
+                                        padding-top:35px;
+                                        font-size:12px;
+                                        color:#617067
+                                    }
+                                    .manifesto
+                                    {
+                                        display:grid;
+                                        grid-template-columns:1fr 1fr;
+                                        background:var(--forest);
+                                        color:white;
+                                        min-height:750px
+                                    }
+                                    .manifesto-image{
+                                        background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85') center/cover
+                                    }
+                                    .manifesto-copy{
+                                        padding:100px 14% 75px
+                                    }
+                                    .manifesto-copy h2{
+                                        font-size:clamp(3rem,5vw,5rem)
+                                    }
+                                    .manifesto-copy h2 em{
+                                        color:var(--lime)
+                                    }.manifesto-copy>p{
+                                            line-height:1.8;
+                                            color:#c2d0c5;
+                                            font-size:13px;
+                                            max-width:440px
+                                        }
+                                        .promise-list{
+                                            margin-top:38px
+                                        }
+                                        .promise-list>div{
+                                            display:flex;
+                                            gap:22px;
+                                            border-top:1px solid #ffffff38;
+                                            padding:19px 0
+                                        }
+                                        .promise-list b{
+                                            color:var(--lime);
+                                            font-size:11px
+                                        }
+                                        .promise-list span{
+                                            display:grid;
+                                            gap:6px
+                                        }
+                                        .promise-list strong{
+                                            font-size:12px
+                                        }
+                                        .promise-list small{
+                                            font-size:11px;
+                                            color:#becbc1
+                                        }
+                                        .disclaimer{
+                                            display:block;
+                                            margin-top:32px;
+                                            color:#a1b5a5;
+                                            font-size:9px
+                                        }
+                                        .notes .section-head{
+                                            margin-bottom:48px
+                                        }
+                                        .quiet{
+                                            font-size:12px;
+                                            color:#788279
+                                        }
+                                        .articles{
+                                            display:grid;
+                                            grid-template-columns:repeat(3,1fr);
+                                            gap:24px
+                                        }
+                                        .articles article img{
+                                            width:100%;
+                                            height:245px;
+                                            object-fit:cover;
+                                            margin-bottom:19px;
+                                            transition:.4s
+                                        }
+                                        .articles article{
+                                            overflow:hidden
+                                        }
+                                        .articles article:hover img{
+                                            transform:scale(1.025)
+                                        }
+                                        .articles article>span{
+                                            font-size:9px;
+                                            color:#728175;
+                                            letter-spacing:1px
+                                        }
+                                        .articles h3{
+                                            font:600 20px/1.3 Manrope;
+                                            letter-spacing:-.5px;
+                                            margin:12px 0 20px
+                                        }
+                                        .articles a{
+                                            font-size:11px;
+                                            font-weight:bold;
+                                            color:var(--green)
+                                        }
+                                        .quote{
+                                            background:#1d5138;
+                                            color:white;
+                                            display:grid;
+                                            grid-template-columns:1fr 1fr;
+                                            gap:12%;
+                                            padding-top:100px;
+                                            padding-bottom:100px
+                                        }
+                                        .quote h2{
+                                            font-size:clamp(3rem,5vw,5rem)
+                                        }
+                                        .quote h2 em{
+                                            color:var(--lime)
+                                        }
+                                        .quote-copy>p{
+                                            color:#c5d4c9;
+                                            font-size:13px;
+                                            line-height:1.8;
+                                            max-width:380px
+                                        }
+                                        .contact-lines{
+                                            display:flex;
+                                            gap:24px;
+                                            margin-top:35px
+                                        }
+                                        .contact-lines a{
+                                            font-size:11px;
+                                            border-bottom:1px solid #a2b9a7;
+                                            padding-bottom:9px
+                                        }
+                                        .quote form{
+                                            display:grid;
+                                            gap:18px
+                                        }
+                                        .quote label{
+                                            display:grid;
+                                            gap:8px;
+                                            font-size:10px;
+                                            color:#d4e1d8
+                                        }.quote input,.quote textarea,.quote select{
+                                            width:100%;
+                                            border:0;
+                                            border-bottom:1px solid #8dad98;
+                                            background:transparent;
+                                            padding:10px 0;
+                                            color:white;
+                                            outline:none;
+                                            font-size:12px;
+                                            border-radius:0
+                                        }
+                                        .quote select option{
+                                            color:var(--ink)
+                                        }
+                                        .quote input::placeholder,.quote textarea::placeholder{
+                                            color:#a5bba9
+                                        }
+                                        .quote form .button{
+                                            justify-self:start;
+                                            margin-top:4px
+                                        }
+                                        .form-status{
+                                            font-size:10px;
+                                            color:#c4d7c9
+                                        }
+                                        footer{
+                                            background:#102b1e;
+                                            color:#e4ebe5;
+                                            padding:58px 8% 20px
+                                        }
+                                        .footer-main{
+                                            display:grid;
+                                            grid-template-columns:1.3fr 1fr 1.2fr 1fr;
+                                            gap:40px;
+                                            padding-bottom:55px
+                                        }
+                                        .footlogo{
+                                            color:#fff
+                                        }.footer-main p{
+                                            font-size:11px;
+                                            line-height:1.7;
+                                            color:#a8b9ac;
+                                            margin-top:15px
+                                        }
+                                        .footer-main>div:nth-child(2),.footer-main>div:nth-child(3){
+                                            display:grid;
+                                            align-content:start;
+                                            gap:12px;
+                                            font-size:11px;
+                                            color:#bdcbbf
+                                        }
+                                        .footer-main b{
+                                            font-size:9px;
+                                            letter-spacing:1.5px;
+                                            color:var(--lime);
+                                            margin-bottom:7px
+                                        }
+                                        .foot-note{
+                                            font:italic 26px/1.3 var(--serif);
+                                            color:#d2dfd4
+                                        }
+                                        .foot-note span{
+                                            color:var(--lime)
+                                        }
+                                        .footer-bottom{
+                                            border-top:1px solid #ffffff26;
+                                            padding-top:18px;
+                                            display:flex;
+                                            justify-content:space-between;
+                                            font-size:9px;
+                                            color:#a3b5a7
+                                        }
+                                        .whatsapp{position:fixed;
+                                            z-index:8;
+                                            right:25px;
+                                            bottom:24px;
+                                            width:49px;
+                                            height:49px;
+                                            border-radius:50%;
+                                            background:#4baf70;
+                                            color:white;
+                                            display:grid;
+                                            place-items:center;
+                                            font-size:25px;
+                                            box-shadow:0 5px 18px #0003
+                                        }
+                                        .top{
+                                            position:fixed;
+                                            bottom:28px;
+                                            left:25px;
+                                            z-index:8;
+                                            border:0;
+                                            background:white;
+                                            color:var(--forest);
+                                            width:38px;
+                                            height:38px;
+                                            border-radius:50%;
+                                            box-shadow:0 4px 15px #0002;
+                                            cursor:pointer;
+                                            opacity:0;
+                                            pointer-events:none;
+                                            transition:.2s
+                                        }
+                                        .top.show{
+                                            opacity:1;
+                                            pointer-events:auto
+                                        }
+                                        .progress{
+                                            position:fixed;
+                                            z-index:20;
+                                            left:0;
+                                            top:0;
+                                            height:3px;
+                                            background:var(--lime);
+                                            width:0
+                                        }
+                                        .modal{
+                                            position:fixed;
+                                            z-index:30;
+                                            inset:0;
+                                            background:#07170fd9;
+                                            display:none;
+                                            place-items:center;
+                                            padding:20px
+                                        }
+                                        .modal.open{
+                                            display:grid
+                                        }
+                                        .modal-box{
+                                            background:var(--cream);
+                                            max-width:650px;
+                                            width:100%;
+                                            padding:42px;
+                                            position:relative
+                                        }
+                                        .close{
+                                            position:absolute;
+                                            right:17px;
+                                            top:13px;
+                                            font-size:28px;
+                                            border:0;
+                                            background:none;
+                                            cursor:pointer
+                                        }
+                                        .modal-box h2{
+                                            font-size:38px
+                                        }
+                                            .modal-box p{
+                                                line-height:1.7;
+                                                color:#536359
+                                            }
+                                            .modal-spec{
+                                                background:#e9ecdf;
+                                                padding:15px;
+                                                font-size:12px;
+                                                line-height:1.8
+                                            }
+                                            .reveal{
+                                                opacity:0;
+                                                transform:translateY(25px);
+                                                transition:.7s
+                                            }.reveal.visibl
+                                            e{
+                                                opacity:1;
+                                                transform:none
+                                            }
+                                            @keyframes rise{
+                                                from{
+                                                    opacity:0;
+                                                    transform:translateY(25px)}to{opacity:1;
+                                                        transform:none
+                                                    }
+                                                }
+                                                @media(max-width:900px){
+                                                    header
+                                                    {padding:0 5%}nav{
+                                                        gap:17px
+                                                    }
+                                                    .section{
+                                                        padding:90px 7%
+                                                    }
+                                                    .intro{
+                                                        gap:5%
+                                                    }
+                                                    .grid{
+                                                        grid-template-columns:repeat(2,1fr)
+                                                    }.manifesto-copy{
+                                                        padding:75px 9%
+                                                    }
+                                                    .hero-content{left:8%}
+                                                }
+                                                @media(max-width:650px){
+                                                    header{
+                                                        height:70p
+                                                    }
+                                                    .hamb{
+                                                        display:block
+                                                    }
+                                                    nav{
+                                                        display:none;
+                                                        position:absolute;
+                                                        top:70px;
+                                                        left:0;
+                                                        width:100%;
+                                                        padding:25px;
+                                                        background:white;
+                                                        color:var(--forest);
+                                                        box-shadow:0 15px 22px #0002;
+                                                        align-items:stretch;
+                                                        flex-direction:column;
+                                                        gap:20px
+                                                    }
+                                                    nav.open{
+                                                        display:flex
+                                                    }
+                                                    .navcta{
+                                                        text-align:center
+                                                    }.hero{
+                                                        min-height:680px;
+                                                        height:95vh;
+                                                        background-position:58% center
+                                                    }
+                                                    .shade{
+                                                        background:linear-gradient(90deg,#09271fe8,#0d3324a3 100%)
+                                                    }
+                                                    .hero-content{
+                                                        top:25%;
+                                                        left:7%;
+                                                        right:7%
+                                                    }
+                                                    .hero h1{
+                                                        font-size:clamp(3.3rem,14vw,5rem)
+                                                    }
+                                                    .hero-content>p{
+                                                        font-size:15px
+                                                    }
+                                                    .hero-stamp{
+                                                        display:none
+                                                    }
+                                                    .hero-note{
+                                                        right:7%;
+                                                        bottom:14%
+                                                    }
+                                                    .intro{
+                                                        grid-template-columns:1fr;
+                                                        gap:50px
+                                                    }
+                                                    .intro-image{
+                                                        height:390px;
+                                                        margin-left:14px
+                                                    }
+                                                    .intro-copy h2{
+                                                        font-size:3.2rem
+                                                    }
+                                                    .values{
+                                                        gap:12px
+                                                    }
+                                                    .values div{
+                                                        font-size:9px
+                                                    }
+                                                    .section-head{
+                                                        align-items:start;
+                                                        gap:20px;
+                                                        flex-direction:column
+                                                    }
+                                                    .section-head h2{
+                                                        font-size:3rem
+                                                    }
+                                                    .filters{
+                                                        align-items:flex-start;
+                                                        flex-direction:column;
+                                                        gap:16px
+                                                    }
+                                                    .chips{
+                                                        flex-wrap:wrap
+                                                    }
+                                                    .grid{
+                                                        gap:10px
+                                                    }
+                                                    .bag{
+                                                        height:175px
+                                                    }
+                                                    .feedbag{
+                                                        transform:scale(.85)
+                                                    }
+                                                    .prod-copy{
+                                                        padding:12px
+                                                    }.prod-copy h3{
+                                                        font-size:15px
+                                                    }.prod-copy p{
+                                                        font-size:10px
+                                                    }.card-actions{
+                                                        gap:8px
+                                                    }
+                                                    .card-actions button{
+                                                        font-size:9px
+                                                    }
+                                                    .catalog{
+                                                        align-items:flex-start;
+                                                        gap:20px;flex-direction:column
+                                                    }
+                                                    .manifesto{
+                                                        grid-template-columns:1fr
+                                                    }
+                                                    .manifesto-image{
+                                                        height:300px
+                                                    }.manifesto-copy{
+                                                        padding:65px 8%
+                                                    }
+                                                    .articles{
+                                                        grid-template-columns:1fr;
+                                                        gap:35px
+                                                    }
+                                                    .articles article img{
+                                                        height:240px
+                                                    }
+                                                    .quote{
+                                                        grid-template-columns:1fr;
+                                                        gap:50px;
+                                                        padding:75px 7%
+                                                    }
+                                                    .quote h2{
+                                                        font-size:3.4rem
+                                                    }.contact-lines{flex-wrap:wrap
+                                                    }
+                                                    .footer-main{
+                                                        grid-template-columns:1fr 1fr;
+                                                        gap:35px 20px
+                                                    }
+                                                    .foot-note
+                                                    {
+                                                        font-size:22px
+                                                    }.footer-bottom{
+                                                        gap:12px;flex-direction:column
+                                                    }.modal-box{
+                                                        padding:35px 23px
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+                                                    }
+                                                    .modal-box h2{
+                                                        font-size:30px
+                                                    }
+                                                }@media(prefers-reduced-motion:reduce)
+                                                    {*,*:before,*:after{scroll-behavior:auto!important;
+                                                        animation-duration:.01ms!important;transition-duration:.01ms!important}}
